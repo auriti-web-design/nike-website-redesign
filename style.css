@@ -3,7 +3,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -14,8 +15,11 @@ body {
 .main {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     max-width: 100%;
     width: 100%;
     height: 100vh;
@@ -30,9 +34,15 @@ body {
 
 .main .nav ul {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -79,15 +89,22 @@ body {
 
 .main .side .search img {
     height: 25px;
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
 }
 
 .main .side .social {
     background: #ea5455;
     height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .main .side .social ul {
@@ -96,7 +113,9 @@ body {
 }
 
 .main .side .social ul li {
-    transform: rotate(-90deg);  
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);  
     padding: 12px;
 }
 
@@ -112,6 +131,8 @@ body {
 .main .side .social ul li a:hover {
     background: #fff;
     color: #191920;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -120,34 +141,52 @@ body {
     position: absolute;
     height: 100vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .main .play .circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-height: 80px;
     height: 80px;
     width: 80px;
     background: #ea5455;
     border-radius: 50%;
     margin-left: -290px;
-    box-shadow: 0px 0px 40px #ea5455;
+    -webkit-box-shadow: 0px 0px 40px #ea5455;
+            box-shadow: 0px 0px 40px #ea5455;
 }
 
 .main .play .circle img {
     height: 50px;
     position: absolute;
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
 }
 
 .main .bottom {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     bottom: 80px;
     left: 0;
     padding: 30px;
@@ -158,38 +197,3 @@ body {
     font-weight: 300;
     letter-spacing: 50px;
 }
-
-/*
-
-.main ul li {
-    display: flex;
-    text-transform: uppercase;
-    letter-spacing: 0.8em;
-}
-
-.main ul li a {
-    padding: 10px 25px;
-    text-decoration: none;
-    color: #191920;
-}
-
-.main ul li a:hover:nth-child(1) {
-    background: #191920;
-    color: #fff;
-    transition: 0.5s;
-}
-
-.main .logo {
-    height: 140px;
-    cursor: pointer;
-}
-
-.shoe {
-    position: relative;
-    max-width: 55%;
-    width: 55%;
-    height: 100vh;
-    background: url(images/shoe.jpg);
-    background-position: center center;
-}
-
